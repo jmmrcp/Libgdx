@@ -5,7 +5,10 @@ import com.badlogic.gdx.Input.Keys;
 
 public class LeftPaddle extends Paddle {
 
-	public static final float SPEED = 100;
+    /**
+     *
+     */
+    public static final float SPEED = 400;
 	
 	public LeftPaddle(float x, float y) {
 		super(x, y);	
