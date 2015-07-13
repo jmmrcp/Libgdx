@@ -15,10 +15,12 @@ import com.badlogic.gdx.Screen;
  */
 public class AbstractScreen implements Screen {
 
+    protected Main main;
+
     public AbstractScreen(Main main) {
         this.main = main;
     }
-    private Main main;
+    
 
     @Override
     public void show() {

@@ -3,11 +3,11 @@ package com.mygdx.pong;
 import com.badlogic.gdx.Game;
 
 public class Main extends Game   {
-	public AbstractScreen gamescreen;
+	public AbstractScreen GAMESCREEN;
 	
 	@Override
 	public void create () {
-            gamescreen = new GameScreen(this);
-            setScreen(gamescreen);		
+            GAMESCREEN = new GameScreen(this);
+            setScreen(GAMESCREEN);		
 	}
 }
