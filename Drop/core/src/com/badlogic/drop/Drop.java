@@ -72,7 +72,11 @@ public class Drop implements ApplicationListener {
 
 	@Override
 	public void render () {
+<<<<<<< HEAD
+		Gdx.gl.glClearColor(0, 0, 0.1f, 1);
+=======
 		Gdx.gl.glClearColor(0, 0, 0.2f, 1);
+>>>>>>> f771d86712e141e6cc1c3568d75e39c9a696bd1c
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		camera.update();
