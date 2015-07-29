@@ -1,10 +1,10 @@
-package com.mygdx.pong.android;
+package com.mygdx.Pong.android;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.mygdx.pong.Main;
+import com.mygdx.Pong.Main;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
