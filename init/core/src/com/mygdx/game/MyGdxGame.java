@@ -60,7 +60,7 @@ public class MyGdxGame extends ApplicationAdapter {
         terrainOffset = 0;
         planeAnimTime = 0;
         planeVelocity.set(400, 0);
-        gravity.set(0, 0);
+        gravity.set(0, -4);
         planeDefaultPosition.set(400 - 88 / 2, 240 - 73 / 2);
         planePosition.set(planeDefaultPosition.x,
                 planeDefaultPosition.y);
