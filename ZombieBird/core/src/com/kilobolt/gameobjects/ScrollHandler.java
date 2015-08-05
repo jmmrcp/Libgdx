@@ -13,7 +13,7 @@ public class ScrollHandler {
 
 		pipe1 = new Pipe(210, 0, 22, 60, SCROLL_SPEED);
 		pipe2 = new Pipe(pipe1.getTailX() + PIPE_GAP, 0, 22, 70, SCROLL_SPEED);
-		pipe3 = new Pipe(pipe2.getTailX() * PIPE_GAP, 0, 22, 60, SCROLL_SPEED);
+		pipe3 = new Pipe(pipe2.getTailX() + PIPE_GAP, 0, 22, 60, SCROLL_SPEED);
 	}
 
 	public void update(float delta) {
@@ -30,6 +30,7 @@ public class ScrollHandler {
 		} else if (pipe3.isScrolledLeft()) {
 			pipe3.reset(pipe2.getTailX() + PIPE_GAP);
 		}
+
 		if (frontGrass.isScrolledLeft()) {
 			frontGrass.reset(backGrass.getTailX());
 		} else if (backGrass.isScrolledLeft()) {

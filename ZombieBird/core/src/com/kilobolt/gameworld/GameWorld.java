@@ -1,6 +1,5 @@
 package com.kilobolt.gameworld;
 
-import com.badlogic.gdx.Gdx;
 import com.kilobolt.gameobjects.Bird;
 import com.kilobolt.gameobjects.ScrollHandler;
 
@@ -19,7 +18,7 @@ public class GameWorld {
 //        this.bird = bird;
 //    }
     public void update(float delta) {
-        Gdx.app.log("GameWorld", "Update");
+        // Gdx.app.log("GameWorld", "Update");
 //        rect.x++;
 //        if (rect.x > 137) {
 //            rect.x = 0;

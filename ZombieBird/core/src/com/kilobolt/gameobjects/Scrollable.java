@@ -19,9 +19,9 @@ public class Scrollable {
     }
     
     public void update(float delta) {
-    	position.add(velocity).cpy().scl(delta);
-    	
-    	if (position.x + width < 0) {
+        position.add(velocity.cpy().scl(delta));
+
+        if (position.x + width < 0) {
     		isScrolledLeft = true;
     	}
     }

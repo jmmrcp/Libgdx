@@ -16,11 +16,11 @@ import com.kilobolt.zbhelpers.AssetLoader;
 
 public class GameRenderer {
 
-    protected OrthographicCamera cam;
-    protected int gameHeight;
-    protected Bird bird;
-    protected ScrollHandler scroller;
-    protected TextureRegion birdMid, birdUp, birdDown;
+    private OrthographicCamera cam;
+    private int gameHeight;
+    private Bird bird;
+    private ScrollHandler scroller;
+    private TextureRegion birdMid, birdUp, birdDown;
     private GameWorld myWorld;
     private ShapeRenderer shapeRenderer;
     private SpriteBatch batch;
@@ -50,7 +50,7 @@ public class GameRenderer {
         initAssets();
     }
     public void render(float runTime) {
-        Gdx.app.log("GameRenderer", "Render");
+        //Gdx.app.log("GameRenderer", "Render");
         
         Bird bird = myWorld.getBird();
         
@@ -125,22 +125,19 @@ public class GameRenderer {
         skullDown = AssetLoader.skullDown;
         bar = AssetLoader.bar;
     }
-
     private void drawGrass() {
         batch.draw(grass, frontGrass.getX(), frontGrass.getY(), frontGrass.getWidth(), frontGrass.getHeight());
         batch.draw(grass, backGrass.getX(), backGrass.getY(), backGrass.getWidth(), backGrass.getHeight());
     }
-
     private void drawSkulls() {
-        batch.draw(skullUp, pipe1.getX() - 1, pipe1.getY() + pipe1.getWidth() - 14, 24, 14);
-        batch.draw(skullUp, pipe2.getX() - 1, pipe2.getY() + pipe2.getWidth() - 14, 24, 14);
-        batch.draw(skullUp, pipe3.getX() - 1, pipe3.getY() + pipe3.getWidth() - 14, 24, 14);
+        batch.draw(skullUp, pipe1.getX() - 1, pipe1.getY() + pipe1.getHeight() - 14, 24, 14);
+        batch.draw(skullUp, pipe2.getX() - 1, pipe2.getY() + pipe2.getHeight() - 14, 24, 14);
+        batch.draw(skullUp, pipe3.getX() - 1, pipe3.getY() + pipe3.getHeight() - 14, 24, 14);
 
-        batch.draw(skullDown, pipe1.getX() - 1, pipe1.getY() + pipe1.getWidth() + 45, 24, 14);
-        batch.draw(skullDown, pipe2.getX() - 1, pipe2.getY() + pipe2.getWidth() + 45, 24, 14);
-        batch.draw(skullDown, pipe3.getX() - 1, pipe3.getY() + pipe3.getWidth() + 45, 24, 14);
+        batch.draw(skullDown, pipe1.getX() - 1, pipe1.getY() + pipe1.getHeight() + 45, 24, 14);
+        batch.draw(skullDown, pipe2.getX() - 1, pipe2.getY() + pipe2.getHeight() + 45, 24, 14);
+        batch.draw(skullDown, pipe3.getX() - 1, pipe3.getY() + pipe3.getHeight() + 45, 24, 14);
     }
-
     private void drawPipes() {
         batch.draw(bar, pipe1.getX(), pipe1.getY(), pipe1.getWidth(), pipe1.getHeight());
         batch.draw(bar, pipe2.getX(), pipe2.getY(), pipe2.getWidth(), pipe2.getHeight());
