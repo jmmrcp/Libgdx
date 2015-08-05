@@ -27,6 +27,37 @@ public class Scrollable {
         isScrolledLeft = false;
     }
     
-    
-    
+    public void update(float delta) {
+    	position.add(velocity).cpy().scl(delta);
+    	
+    	if (position.x + width < 0) {
+    		isScrolledLeft = true;
+    	}
+    }
+    public void reset (float newX) {
+    	position.x = newX;
+    	isScrolledLeft = false;
+    }
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public boolean isScrolledLeft() {
+		return isScrolledLeft;
+	}
+    public float getTailX() {
+    	return position.x + width;
+    }
+    public float getX() {
+    	return position.x;
+    	
+    }
+    public float getY() {
+    	return position.y;
+    }
 }
