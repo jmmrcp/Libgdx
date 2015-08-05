@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.kilobolt.screens;
 
 import com.badlogic.gdx.Gdx;
@@ -11,19 +6,12 @@ import com.kilobolt.gameworld.GameRenderer;
 import com.kilobolt.gameworld.GameWorld;
 import com.kilobolt.zbhelpers.InputHandler;
 
-/**
- *
- * @author JoséM
- */
 public class GameScreen implements Screen{
     
     private GameWorld world;
     private GameRenderer renderer;
     private float runTime = 0;
-    
-    /**
-     *
-     */
+
     public GameScreen() {
         Gdx.app.log("GameScreen", "Attached");
         
@@ -40,12 +28,10 @@ public class GameScreen implements Screen{
         Gdx.input.setInputProcessor(new InputHandler(world.getBird()));
     
 }
-
     @Override
     public void show() {
         Gdx.app.log("GameScreen", "Show Called");
     }
-
     @Override
     public void render(float delta) {
         
@@ -57,30 +43,23 @@ public class GameScreen implements Screen{
         world.update(delta);
         renderer.render(runTime);
     }
-
     @Override
     public void resize(int width, int height) {
         Gdx.app.log("GameScreen", "Resizing");
     }
-
     @Override
     public void pause() {
         Gdx.app.log("GameScreen", "Pause Called");
     }
-
     @Override
     public void resume() {
         Gdx.app.log("GameScreen", "Resume Called");
     }
-
     @Override
     public void hide() {
         Gdx.app.log("GameScreen", "Hide Called");
     }
-
     @Override
     public void dispose() {
-        
     }
-    
 }

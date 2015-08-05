@@ -5,7 +5,6 @@ import com.badlogic.gdx.Gdx;
 import com.kilobolt.screens.GameScreen;
 import com.kilobolt.zbhelpers.AssetLoader;
 
-
 public class ZBGame extends Game {
 
     @Override
@@ -14,11 +13,9 @@ public class ZBGame extends Game {
         AssetLoader.load();
         setScreen(new GameScreen());
     }
-    
     @Override
     public void dispose() {
         super.dispose();
         AssetLoader.dispose();
     }
-	
 }

@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.kilobolt.gameobjects;
 
 import com.badlogic.gdx.math.Vector2;
 
-/**
- *
- * @author JoséM
- */
 public class Scrollable {
     
     protected Vector2 position;
@@ -38,15 +29,12 @@ public class Scrollable {
     	position.x = newX;
     	isScrolledLeft = false;
     }
-
 	public int getWidth() {
 		return width;
 	}
-
 	public int getHeight() {
 		return height;
 	}
-
 	public boolean isScrolledLeft() {
 		return isScrolledLeft;
 	}
